@@ -1,7 +1,9 @@
 const hearts = document.getElementsByClassName('heart-icon');
 const calls = document.getElementsByClassName('call-btn');
+const copys = document.getElementsByClassName('copy-btn');
 const clearBtn = document.getElementById('clear-btn');
 const callHistory = [];
+
 for (let i = 0; i < hearts.length; i++) {
     hearts[i].addEventListener('click',(e) => {
         e.preventDefault();
@@ -55,7 +57,7 @@ for(let i=0; i < calls.length; i++)
         }
     })
 }
-clearBtn.addEventListener('click', () => {
+let clear = clearBtn.addEventListener('click', () => {
     // console.log("clear btn clicked");
     callHistory.length = 0;
     //console.log(callHistory);
@@ -63,3 +65,27 @@ clearBtn.addEventListener('click', () => {
     //console.log(callHistorySection);
     callHistorySection.innerHTML="";
 })
+
+for(let i=0; i < copys.length ; i++)
+{
+    copys[i].addEventListener('click',(e) => {
+        e.preventDefault();
+        const copyCounts = document.getElementsByClassName('copy-count');
+        let copyNumber = 0;
+        copyNumber =parseInt(copyCounts[0].innerText);
+        copyNumber += 1;
+        for(copyCount of copyCounts)
+        {
+            copyCount.innerText = `${copyNumber}`;
+        }
+        const card = document.getElementsByClassName('cards')[i];
+        const serviceNumber = card.getElementsByClassName('service-number')[0].innerText;
+        navigator.clipboard.writeText(serviceNumber)
+        .then(() => {
+          alert(`Service Number Copied: ${serviceNumber}`);
+        })
+        .catch(err => {
+          console.error("Failed to copy: ", err);
+        });
+    })
+}
