@@ -11,7 +11,9 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- daisyui cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/5.1.6/daisyui.css" integrity="sha512-cd1Y3hqF/3N9i49e0ACyeEu933RhRvMk6uYT6OoAF/qKUxhoT0yC4s6W7qgIPCkMaL/D9fyVkkHu7jxUBVK0Iw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/5.1.6/daisyui.css"
+        integrity="sha512-cd1Y3hqF/3N9i49e0ACyeEu933RhRvMk6uYT6OoAF/qKUxhoT0yC4s6W7qgIPCkMaL/D9fyVkkHu7jxUBVK0Iw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Emergency Hotline</title>
 </head>
 
@@ -23,7 +25,40 @@
                 <img class="h-[80px] w-[80px]" src="./assets/logo.png" alt="logo">
                 <h2 class="font-bold text-3xl text-emerald-900">Emergency<br>Service</h2>
             </div>
-            <div class="flex justify-evenly gap-5">
+            <div class="flex gap-2 md:hidden">
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost">
+                        <div class="w-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <div class="flex flex-col justify-evenly gap-5">
+                            <div
+                                class="flex items-center justify-center gap-2 h-[67px] w-[122px] px-4 py-6 bg-[#41ff6b1a]  rounded-[50px] ">
+                                <p>0</p>
+                                <img class="h-[25px] w-[25px]" src="./assets/heart.png" alt="">
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-2 h-[67px] w-[122px] px-4 py-6 bg-[#41ff6b1a] rounded-[50px]">
+                                <p>0</p>
+                                <img class="h-[25px] w-[25px]" src="./assets/coin.png" alt="">
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-2 h-[67px] w-[122px] px-4 py-6 bg-[#00a63e] rounded-[50px]">
+                                <p class="text-white">0</p>
+                                <p class="text-white">copy</p>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-evenly gap-5 hidden md:flex">
                 <div
                     class="flex items-center justify-center gap-2 h-[67px] w-[122px] px-4 py-6 bg-[#41ff6b1a]  rounded-[50px] ">
                     <p>0</p>
@@ -43,16 +78,16 @@
         </nav>
         <!-- banner section starts here -->
         <section
-            class="bg-linear-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center px-14 py-6">
+            class="bg-linear-to-r from-[#013223] via-[#006747] to-[#013223] text-center flex flex-col justify-center items-center px-14 py-6">
             <img src="./assets/logo.png" alt="logo">
-            <h2 class="text-white text-2xl font-bold">Emergency Service Directory</h2>
-            <p class="text-white text-2xl font-semibold">Government Emergency Services at Your Fingertip – A Project by
+            <h2 class="text-white text-3xl font-bold">Emergency Service Directory</h2>
+            <p class="text-white text-2xl font-medium">Government Emergency Services at Your Fingertip – A Project by
                 Government of the People’s Republic of Bangladesh</p>
         </section>
     </header>
-    <main class="grid grid-cols-4 px-6 py-14 gap-7 max-w-[1920px] mx-auto bg-[#41ff6b1a] ">
+    <main class="grid md:grid-cols-4 px-6 py-14 gap-7 max-w-[1920px] mx-auto bg-[#41ff6b1a] ">
         <!-- service card section starts here -->
-        <section class="col-span-3 grid grid-cols-3 gap-7">
+        <section class="md:col-span-4 lg:col-span-3 grid md:grid-cols-3 gap-7">
             <!-- card 1  -->
             <div class="flex flex-col p-8 bg-white rounded-2xl gap-y-4 shadow-2xl">
                 <div class="flex justify-between items-center">
@@ -70,8 +105,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Emergency </span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 2  -->
@@ -91,8 +128,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Police</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 3  -->
@@ -112,8 +151,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Fire</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 4  -->
@@ -133,8 +174,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Ambulance</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 5  -->
@@ -154,8 +197,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Railway helpline</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 6  -->
@@ -175,8 +220,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">NGO</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 7  -->
@@ -196,8 +243,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Child</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 8  -->
@@ -217,8 +266,10 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">Nid</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <!-- card 9  -->
@@ -238,13 +289,15 @@
                     <span class="bg-[#f2f2f2] px-4 py-2 rounded-3xl">ACC</span>
                 </div>
                 <div class="flex gap-2">
-                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="px-8 py-3 border-[1px] border-[#d4d6d5] rounded-2xl flex-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="px-8 py-3 bg-[#00a63e] rounded-2xl text-white flex-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
         </section>
         <!-- call history section starts here -->
-        <section class="p-6 bg-white">
+        <section class="p-6 md:col-span-4 lg:col-span-1 bg-white rounded-2xl shadow-2xl">
             <!-- section title  -->
             <div class="flex justify-between items-center mb-4">
                 <div>
@@ -267,7 +320,7 @@
             </div> -->
         </section>
     </main>
-    
+
     <script src="./index.js"></script>
 </body>
 
